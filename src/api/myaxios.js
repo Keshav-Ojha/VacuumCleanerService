@@ -97,13 +97,22 @@ export const updateBooking = async (val, editUrl) => {
 export const fetchUserBookings = async (userId) => {
   const res = await axiosObject({
     method: "get",
-    url: `/getAppointments/${userId}`,
+    url: `/user/appointmentInfo/${userId}`,
     headers: {
       "Access-Control-Allow-Origin": true,
     },
   });
   return res;
 };
+
+export const fetchCenterBookings = async (centerId) => {
+  const res = await axiosObject({
+    method: "get",
+    url: `/center/appointmentInfo/${centerId}`,
+  });
+  return res;
+};
+
 export const fetchAllBookings = async (userId) => {
   const res = await axiosObject({
     method: "get",
