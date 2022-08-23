@@ -27,7 +27,6 @@ function UserDashboard(props) {
 
   const fetchAppointmentList = async () => {
     let res = await fetchCenterBookings(card.serviceCenterId);
-    console.log("hadjflajdlkfjasdlf", res);
     setAppointmentList(res.data);
   };
 
